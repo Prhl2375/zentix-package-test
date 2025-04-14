@@ -18,7 +18,10 @@ class ZentixPackageTestServiceProvider extends ServiceProvider{
        ]);
 
        $this->publishes([
-        __DIR__.'/../public' => public_path('prhl2375/zentix-package-test'),
+            __DIR__.'/../public' => public_path('prhl2375/zentix-package-test'),
         ], 'zentixpackage-assets');
+        $this->publishes([
+            __DIR__.'/../config' => config_path(''),
+        ], 'zentixpackage-config');
     }
 }

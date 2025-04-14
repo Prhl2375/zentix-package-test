@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Prhl2375\ZentixPackageTest\Http\Controllers\ContactController;
 
 Route::group([
-    'prefix' => config('zentixpackagetest.route_prefix', 'contacts'),
+    'prefix' => config('zentixpackage.route_prefix', 'contacts'),
     'namespace' => 'Prhl2375\ZentixPackageTest\Http\Controllers',
     'middleware' => ['web'],
 ], function () {

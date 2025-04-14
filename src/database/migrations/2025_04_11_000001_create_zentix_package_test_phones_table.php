@@ -23,6 +23,8 @@ class CreateZentixPackageTestPhonesTable extends Migration
                 ->references('id')
                 ->on('zentix_package_test_contacts')
                 ->onDelete('cascade');
+
+            $table->index(['contact_id', 'phone']);
         });
     }
 

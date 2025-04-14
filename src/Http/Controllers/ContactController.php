@@ -15,7 +15,7 @@ class ContactController extends Controller
 {
     public function index(): View
     {
-        $contacts = Contact::with("phones")->orderBy('updated_at', 'desc')->paginate(20);
+        $contacts = Contact::with("phones")->orderBy('updated_at', 'desc')->paginate(config('zentixpackage.pagination_per_page', 5));
         return view('zentixpackage::index', ['contacts' => $contacts]);
     }
     public function store(StoreContactRequest $request): RedirectResponse
