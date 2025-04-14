@@ -30,13 +30,13 @@ class ContactController extends Controller
         foreach ($data['phones'] as $phoneNumber) {
             $contact->phones()->create(['phone' => $phoneNumber]);
         }
-        return redirect()->route('zentixpackagetest.index')
+        return redirect()->route('zentixpackage.index')
             ->with('status','Contact created successfully.');
     }
     public function destroy($id): RedirectResponse
     {
         Contact::destroy($id);
-        return redirect()->route('zentixpackagetest.index')
+        return redirect()->route('zentixpackage.index')
             ->with('status','Contact deleted successfully.');
     }
 }

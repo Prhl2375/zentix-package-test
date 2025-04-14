@@ -10,10 +10,11 @@ Route::group([
 ], function () {
     Route::get('/',
         [ContactController::class, 'index'])
-        ->name('zentixpackagetest.index');
+        ->name('zentixpackage.index');
     Route::post('/',
         [ContactController::class, 'store'])
-        ->name('zentixpackagetest.store');
+        ->name('zentixpackage.store');
     Route::delete('/{id}',
-        [ContactController::class, 'destroy']);
+        [ContactController::class, 'destroy'])
+        ->name('zentixpackage.destroy');
 });
